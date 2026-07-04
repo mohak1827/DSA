@@ -14,10 +14,7 @@ class Solution {
                 c++;
             }
         }
-        // System.out.println(arr.length);
-        // for(int i = 0; i < arr.length; i++){
-        //     System.out.println(arr[i]);
-        // }
+        
         if(arr.length != 4 && arr.length != 8){
             return "Neither";
         }
@@ -96,6 +93,5 @@ class Solution {
             }
             return "IPv6";
         }
-        // return "";
     }
 }
