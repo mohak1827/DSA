@@ -7,16 +7,12 @@ class Solution {
         for(int r = 0; r < n; r++)
         {
             sum += nums[r];
-            long score = sum*(r-l+1);
-            
-                while(score >= k && l <= r)
-                {
-                    
-                    sum -= nums[l];
-                    l++;
-                    score = sum * (r-l+1);
-                    
-                }
+
+            while(sum * (r-l+1) >= k)
+            {
+                sum -= nums[l];
+                l++; 
+            }
             
             c += r-l+1;
         }
