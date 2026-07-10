@@ -7,15 +7,13 @@ class Solution {
         for(int r = 0; r < n; r++)
         {
             sum += nums[r];
-            if(sum >= target)
-            {
                 while(sum >= target)
                 {
                     min = Math.min(min,r-l+1);
                     sum -= nums[l];
                     l++;
                 }
-            }
+            
         }
         return min==Integer.MAX_VALUE?0:min;
     }
