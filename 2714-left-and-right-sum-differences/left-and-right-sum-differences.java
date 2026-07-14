@@ -18,7 +18,6 @@ class Solution {
             
             int rightSum = nums[n-1] - nums[i];
             int leftSum = nums[i-1];
-            System.out.println(nums[n-1] + " " + rightSum + " " + leftSum);
             ans[i] = Math.abs(rightSum - leftSum);
         }
         return ans;
