@@ -3,11 +3,10 @@ class Solution {
         int l = 0;
         int r = 0;
         int maxLen = 0;
-        int n = s.length();
 
         Map<Character, Integer> map = new HashMap<>();
 
-        while(r < n)
+        while(r < s.length())
         {
             char ch = s.charAt(r);
             if(map.containsKey(ch))
