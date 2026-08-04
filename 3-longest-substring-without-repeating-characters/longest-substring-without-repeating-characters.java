@@ -4,18 +4,19 @@ class Solution {
         int r = 0;
         int maxLen = 0;
         int n = s.length();
-        Set<Character> set = new HashSet<>();
+
+        Map<Character, Integer> map = new HashMap<>();
+
         while(r < n)
         {
-            while(set.contains(s.charAt(r)))
+            char ch = s.charAt(r);
+            if(map.containsKey(ch))
             {
-                set.remove(s.charAt(l));
-                l++;
+                l = Math.max(map.get(ch)+1,l);
             }
-                set.add(s.charAt(r));
-                maxLen = Math.max(maxLen, r-l+1);
-                r++;
-            
+            map.put(ch,r);
+            maxLen = Math.max(maxLen, r-l+1);
+            r++;
         }
         return maxLen;
     }
