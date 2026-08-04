@@ -10,10 +10,7 @@ class Solution {
             char ch = s.charAt(r);
             if(arr[ch] != -1)
             {
-                if(arr[ch] >= l)
-                {
-                    l = arr[ch]+1;
-                }
+                l = Math.max(l,arr[ch]+1);
             }
             arr[ch]=r;
             maxLen = Math.max(maxLen, r-l+1);
