@@ -7,15 +7,15 @@ class Solution {
         Set<Character> set = new HashSet<>();
         while(r < n)
         {
-            char ch = s.charAt(r);
-            if(set.contains(ch))
+            if(set.contains(s.charAt(r)))
             {
                 set.remove(s.charAt(l));
                 l++;
-            }else{
-            set.add(ch);
-            maxLen = Math.max(maxLen, r-l+1);
-            r++;
+            }
+            else{
+                set.add(s.charAt(r));
+                maxLen = Math.max(maxLen, r-l+1);
+                r++;
             }
         }
         return maxLen;
