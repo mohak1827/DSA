@@ -4,16 +4,17 @@ class Solution {
         int r = 0;
         int n = s.length();
         int maxLen = 0;
-        Map<Character, Integer> map = new HashMap<>();
+        int[] arr = new int[256];
+        Arrays.fill(arr,-1);
         while(r < n)
         {
             char ch = s.charAt(r);
-            if(map.containsKey(ch))
+            if(arr[ch] != -1)
             {
-                l = Math.max(l,map.get(ch)+1);
-                map.replace(ch,r);
+                System.out.println(ch+":"+arr[ch]);
+                l = Math.max(l,arr[ch]+1);
             }
-            else map.put(ch,r);
+            arr[ch]=r;
             maxLen = Math.max(maxLen, r-l+1);
             r++;
         }
