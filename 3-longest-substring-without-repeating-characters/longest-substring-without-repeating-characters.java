@@ -4,7 +4,7 @@ class Solution {
         int r = 0;
         int n = s.length();
         int maxLen = 0;
-        int[] arr = new int[256];
+        int[] arr = new int[128];
         Arrays.fill(arr,-1);
         while(r < n)
         {
