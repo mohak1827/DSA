@@ -9,9 +9,9 @@ class Solution {
         while(r < s.length())
         {
             char ch = s.charAt(r);
-            if(map.containsKey(ch) && map.get(ch) >= l)
+            if(map.containsKey(ch))
             {
-                l = map.get(ch)+1;
+                l = Math.max(l,map.get(ch)+1);
             }
             map.put(ch,r);
             maxLen = Math.max(maxLen, r-l+1);
