@@ -8,14 +8,15 @@ class Solution {
         while(r < n)
         {
             char ch = s.charAt(r);
-            while(set.contains(ch))
+            if(set.contains(ch))
             {
                 set.remove(s.charAt(l));
                 l++;
-            }
+            }else{
             set.add(ch);
             maxLen = Math.max(maxLen, r-l+1);
             r++;
+            }
         }
         return maxLen;
     }
