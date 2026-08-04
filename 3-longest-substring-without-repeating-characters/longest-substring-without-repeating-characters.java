@@ -12,8 +12,9 @@ class Solution {
             if(map.containsKey(ch))
             {
                 l = Math.max(map.get(ch)+1,l);
-            }
-            map.put(ch,r);
+                map.replace(ch,r);
+            }else
+                map.put(ch,r);
             maxLen = Math.max(maxLen, r-l+1);
             r++;
         }
