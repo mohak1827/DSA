@@ -2,11 +2,10 @@ class Solution {
     public int lengthOfLongestSubstring(String s) {
         int l = 0;
         int r = 0;
-        int n = s.length();
         int maxLen = 0;
         int[] arr = new int[128];
         Arrays.fill(arr,-1);
-        while(r < n)
+        while(r < s.length())
         {
             char ch = s.charAt(r);
             if(arr[ch] != -1)
