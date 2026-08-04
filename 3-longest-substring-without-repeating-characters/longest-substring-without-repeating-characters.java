@@ -11,7 +11,6 @@ class Solution {
             char ch = s.charAt(r);
             if(arr[ch] != -1)
             {
-                System.out.println(ch+":"+arr[ch]);
                 l = Math.max(l,arr[ch]+1);
             }
             arr[ch]=r;
