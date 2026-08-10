@@ -9,7 +9,7 @@ class Solution {
             while(map.size() > 2)
             {
                 int fruit = fruits[l];
-                map.replace(fruit,map.get(fruit)-1);
+                map.put(fruit,map.get(fruit)-1);
                 if(map.get(fruit) == 0)
                 {
                     map.remove(fruit);
