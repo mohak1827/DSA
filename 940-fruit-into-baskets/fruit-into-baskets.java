@@ -6,7 +6,7 @@ class Solution {
         for(int r = 0; r < fruits.length; r++)
         {
             map.put(fruits[r], map.getOrDefault(fruits[r],0)+1);
-            while(map.size() > 2)
+            if(map.size() > 2)
             {
                 int fruit = fruits[l];
                 int freq = map.get(fruit)-1;
