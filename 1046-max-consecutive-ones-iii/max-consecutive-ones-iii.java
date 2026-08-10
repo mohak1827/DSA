@@ -9,8 +9,7 @@ class Solution {
             {
                 flips++;
             }
-            
-            while(flips > k)
+            if(flips > k)
             {
                 if(nums[l] == 0)
                 {
