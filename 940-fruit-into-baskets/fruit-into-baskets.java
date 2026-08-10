@@ -17,10 +17,6 @@ class Solution {
             }
             count = Math.max(count, r-l+1);
         }
-        for(int n : map.keySet())
-        {
-            System.out.println(n + " " + map.get(n));
-        }
         return count;
     }
 }
