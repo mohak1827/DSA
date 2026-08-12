@@ -6,10 +6,9 @@ class Solution {
         for(int i = 0; i < n; i++)
         {
             arr[s.charAt(i)-'a']=i;
-            int min = Math.min(arr[0],Math.min(arr[1],arr[2]));
-            if(min != -1)
+            if(arr[0] != -1 && arr[1] != -1 && arr[2] != -1)
             {
-                count += min+1;
+                count+=(Math.min(arr[0],Math.min(arr[1],arr[2]))+1);
             }
         }
         return count;
