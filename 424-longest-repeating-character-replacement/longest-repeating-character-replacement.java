@@ -18,12 +18,9 @@ class Solution {
                 maxLen = Math.max(maxLen, r-l+1);
             }
             else{
-                if(r-l+1-maxFreq > k)
+                while(r-l+1-maxFreq > k)
                 {
                     char c = s.charAt(l);
-                    // if(map.get() >= maxFreq){
-                    //     maxFreq = map.get(c);
-                    // }
                     int freq = map.get(c)-1;
                     map.put(c,freq);
                     if(freq==0)
