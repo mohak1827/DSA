@@ -20,12 +20,10 @@ class Solution {
             else{
                 while(r-l+1-maxFreq > k)
                 {
-                    char c = s.charAt(l);
-                    int freq = map.get(c)-1;
-                    map.replace(c,freq);
-                    if(freq==0)
+                    map.replace(s.charAt(l),map.get(s.charAt(l))-1);
+                    if(map.get(s.charAt(l))==0)
                     {
-                        map.remove(c);
+                        map.remove(s.charAt(l));
                     }
                     l++;
                 }
