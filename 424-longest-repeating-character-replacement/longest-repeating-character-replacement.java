@@ -22,7 +22,7 @@ class Solution {
                 {
                     char c = s.charAt(l);
                     int freq = map.get(c)-1;
-                    map.put(c,freq);
+                    map.replace(c,freq);
                     if(freq==0)
                     {
                         map.remove(c);
