@@ -17,7 +17,6 @@ class Solution {
             {
                 maxLen = Math.max(maxLen, r-l+1);
             }
-            else{
                 if(r-l+1-maxFreq > k)
                 {
                     char c = s.charAt(l);
@@ -35,7 +34,7 @@ class Solution {
                           
                     l++;
                 }
-            }
+            
         }
         return maxLen;
     }
