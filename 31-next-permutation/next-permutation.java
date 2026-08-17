@@ -32,7 +32,6 @@ class Solution {
         }
         int m = idx+1;
         int n = nums.length - 1;
-
         while(m <= n)
         {
             int t = nums[m];
