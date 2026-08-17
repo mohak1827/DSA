@@ -9,10 +9,9 @@ class Solution {
                 break;
             }
         }
-        int k = nums.length - 1;
         if(idx != -1)
         {
-            while(k > idx)
+            for(int k = nums.length - 1; k > idx; k--)
             {
                 if(nums[k] > nums[idx])
                 {
@@ -21,7 +20,6 @@ class Solution {
                     nums[k] = temp;
                     break;
                 }
-                k--;
             }
         }
         int m = idx+1;
