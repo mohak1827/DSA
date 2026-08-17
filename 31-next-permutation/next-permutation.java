@@ -21,10 +21,6 @@ class Solution {
                     k--;
                     continue;
                 }
-                // if(nums[k] <= nums[val])
-                // {
-                //     val = k;
-                // }
                 k--;
             }
             if(nums[val] > nums[idx])
