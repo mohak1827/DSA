@@ -10,24 +10,18 @@ class Solution {
             }
         }
         int k = nums.length - 1;
-        int val = k;
         if(idx != -1)
         {
             while(k > idx)
             {
-                if(nums[k] <= nums[idx])
+                if(nums[k] > nums[idx])
                 {
-                    val--;
-                    k--;
-                    continue;
+                    int temp = nums[idx];
+                    nums[idx] = nums[k];
+                    nums[k] = temp;
+                    break;
                 }
                 k--;
-            }
-            if(nums[val] > nums[idx])
-            {
-                int temp = nums[idx];
-                nums[idx] = nums[val];
-                nums[val] = temp;
             }
         }
         int m = idx+1;
