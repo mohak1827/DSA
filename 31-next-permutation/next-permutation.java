@@ -1,7 +1,8 @@
 class Solution {
     public void nextPermutation(int[] nums) {
         int idx = -1;
-        for(int i = nums.length - 2; i >= 0; i--)
+        int n = nums.length;
+        for(int i = n - 2; i >= 0; i--)
         {
             if(nums[i] < nums[i+1])
             {
@@ -11,7 +12,7 @@ class Solution {
         }
         if(idx != -1)
         {
-            for(int k = nums.length - 1; k > idx; k--)
+            for(int k = n - 1; k > idx; k--)
             {
                 if(nums[k] > nums[idx])
                 {
@@ -23,15 +24,15 @@ class Solution {
             }
         }
         int m = idx+1;
-        int n = nums.length - 1;
-        while(m <= n)
+        int p = n - 1;
+        while(m <= p)
         {
             int t = nums[m];
-            nums[m] = nums[n];
-            nums[n] = t;
+            nums[m] = nums[p];
+            nums[p] = t;
 
             m++;
-            n--;
+            p--;
         }
     }
 }
