@@ -1,17 +1,14 @@
 class Solution {
     public int maxArea(int[] nums) {
-        int ans = 0;
         int i = 0;
-        int j = nums.length-1;
-        while(i < j){
-            int res = Math.min(nums[i],nums[j]);
-            ans = Math.max(ans, res*(j-i));
-            if(nums[i] <= nums[j]){
-                i++;
-            }else{
-                j--;
-            }
+        int j = nums.length - 1;
+        int max = 0;
+        while(i < j)
+        {
+            max = Math.max(Math.min(nums[i], nums[j])*(j-i),max);
+            if(nums[i]<nums[j]) i++;
+            else j--;
         }
-        return ans;
+        return max;
     }
 }
