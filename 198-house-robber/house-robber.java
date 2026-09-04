@@ -14,16 +14,4 @@ class Solution {
         }
         return dp[nums.length-1];
     }
-    public int helper(int n, int[] nums, int[] dp)
-    {
-        if(n == 0) return nums[n];
-        if(n < 0) return 0;
-
-        if(dp[n] != -1) return dp[n];
-
-        int l = nums[n] + helper(n-2, nums, dp);
-        int r = 0 + helper(n-1, nums, dp);
-
-        return dp[n] = Math.max(l,r);
-    }
 }
