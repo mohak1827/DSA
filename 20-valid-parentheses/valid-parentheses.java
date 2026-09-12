@@ -15,21 +15,21 @@ class Solution {
                 {
                     return false;
                 }
-                else if(ch == ')' && st.peek() != '(')
+                else if(ch == ')' && st.peek() == '(')
                 {
-                    return false;
+                    st.pop();
                 }
-                else if(ch == ']' && st.peek() != '[')
+                else if(ch == ']' && st.peek() == '[')
                 {
-                    return false;
+                    st.pop();
                 }
-                else if(ch == '}' && st.peek() != '{')
+                else if(ch == '}' && st.peek() == '{')
                 {
-                    return false;
+                    st.pop();
                 }
                 else
                 {
-                    st.pop();
+                    return false;
                 }
             }
         }
