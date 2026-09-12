@@ -5,7 +5,6 @@ class MinStack {
         s = new Stack<>();
         min = new Stack<>();
     }
-    
     public void push(int value) {
         s.push(value);
         if(min.empty() || value <= min.peek())
@@ -13,7 +12,6 @@ class MinStack {
             min.push(value);
         }
     }
-    
     public void pop() {
         if(s.peek().equals(min.peek()))
         {
@@ -21,11 +19,9 @@ class MinStack {
         }
         s.pop();
     }
-    
     public int top() {
         return s.peek();
     }
-    
     public int getMin() {
         return min.peek();
     }
