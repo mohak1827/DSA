@@ -15,11 +15,11 @@ class MinStack {
     }
     
     public void pop() {
-        int val = st.pop();
-        if(val==min.peek())
+        if(st.peek().equals(min.peek()))
         {
             min.pop();
         }
+        st.pop();
     }
     
     public int top() {
