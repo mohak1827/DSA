@@ -10,31 +10,16 @@ class Solution {
             }
             else
             {
-                right++;
-            }
-            if(right > left)
-            {
-                left = right = 0;
-            }
-        }
-        int m1 = left-right;
-        left = right = 0;
-        for(int i = s.length()-1; i >= 0; i--)
-        {
-            if(s.charAt(i) == ')')
-            {
-                right++;
-            }
-            else
-            {
-                left++;
-            }
-            if(left > right)
-            {
-                left = right = 0;
+                if(left > 0)
+                {
+                    left--;
+                }
+                else
+                {
+                    right++;
+                }
             }
         }
-        int m2 = right - left;
-        return m1+m2;
+        return left+right;
     }
 }
