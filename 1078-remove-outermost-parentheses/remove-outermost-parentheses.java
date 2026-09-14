@@ -13,7 +13,7 @@ class Solution {
             else
             {
                int j = st.pop();
-               if(st.size()==0)
+               if(st.empty())
                {
                 sb.append(s.substring(j+1,i));
                }
