@@ -9,11 +9,7 @@ class Solution {
             {
                 st.pop();
             }
-            if(st.empty())
-            {
-                ans[i] = 0;
-            }
-            else
+            if(!st.empty())
             {
                 ans[i] = st.peek()-i;
             }
