@@ -18,7 +18,7 @@ class Solution {
                 list.add(matrix[i][right]);
             }
             right--;
-            if(left <= right && top <= bottom)
+            if(top <= bottom)
             {
                 for(int i = right; i>= left; i--)
                 {
@@ -26,7 +26,7 @@ class Solution {
                 }
                 bottom--;
             }
-            if(top <= bottom && left <= right)
+            if(left <= right)
             {
                 for(int i = bottom; i >= top; i--)
                 {
