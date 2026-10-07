@@ -6,15 +6,19 @@ class Solution {
         {
             que.offer(i);
         }
-        while(tickets[k] > 0)
+        while(!que.isEmpty())
         {
             int idx = que.poll();
             tickets[idx]--;
-            if(tickets[idx] != 0)
+            time++;
+            if(tickets[idx] == 0 && idx == k)
+            {
+                return time;
+            }
+            if(tickets[idx] > 0)
             {
                 que.offer(idx);
             }
-            time++;
         }
         return time;
     }
