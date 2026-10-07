@@ -11,7 +11,7 @@ class Solution {
         {
             if(que.peek() == sandwiches[idx])
             {
-                c=0;
+                c = 0;
                 que.poll();
                 idx++;
             }
@@ -25,6 +25,6 @@ class Solution {
             }
             c++;
         }
-        return sandwiches.length-idx;
+        return c;
     }
 }
