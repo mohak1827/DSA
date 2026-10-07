@@ -6,25 +6,21 @@ class Solution {
             que.offer(val);
         }
         int idx = 0;
-        int c = 0;
-        while(!que.isEmpty())
+        int size = 0;
+        while(size < que.size() && !que.isEmpty())
         {
             if(que.peek() == sandwiches[idx])
             {
-                c = 0;
+                size = 0;
                 que.poll();
                 idx++;
             }
             else
             {
                 que.offer(que.poll());
+                size++;
             }
-            if(c == que.size())
-            {
-                return que.size();
-            }
-            c++;
         }
-        return c;
+        return que.size();
     }
 }
