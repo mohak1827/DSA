@@ -1,5 +1,5 @@
 class Solution {
-    public double myPow(double x, long n){
+    public double myPow(double x, int n) {
         double res = pow(x, Math.abs(n));
         if(n < 0)
         {
@@ -7,19 +7,21 @@ class Solution {
         }
         return res;
     }
-    public double pow(double x, long n)
+    public double pow(double x, int n)
     {
         if(n == 0)
         {
             return 1;
         }
         double half = pow(x, n/2);
-        half = half*half;
-
-        if(n %2 == 0)
+        half = half * half;
+        if(n % 2 == 0)
         {
             return half;
         }
-        return half*x;
+        else
+        {
+            return half * x;
+        }
     }
 }
